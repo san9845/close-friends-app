@@ -1,38 +1,193 @@
-.App {
+.layout {
   text-align: center;
+  max-width: 30rem;
+  margin: 4rem auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ /* heading css */
+.heading-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+  gap: 10px;
+  background-color: rosybrown;
+  padding: 15px;
+}
+
+.heading-container h1 {
+  font-size: 22px;
+
+}
+
+.heading-container button {
+  padding: 0.5rem;
+  border: none;
+  background-color: rgb(193, 225, 253);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.heading-container button:hover {
+  background-color: rgb(147, 189, 226);
+}
+
+/* list css */
+
+.friends-list {
+  font-size: 18px;
+}
+
+.friends-list button {
+  padding: 0.5rem;
+  border: none;
+  background-color: crimson;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.friends-list button:hover {
+  background-color: rgb(230, 82, 112);
+}
+
+.friends-list ul li{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px;
+}
+
+.friends-list ul li:nth-child(even) {
+  background: rgb(240, 237, 237);
+}
+
+.friends-list-actions {
+  display: flex;
+  gap: 5px;
+}
+
+/* add friends */
+
+.add-friends-container {
+  padding: 10px;
+
+}
+
+.add-friend-wrapper {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-friend-wrapper input {
+  height: 35px;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-friend-wrapper button {
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+  border-radius:5px;
+  cursor: pointer;
+}
+
+.add-friend-wrapper .submit {
+  background-color: greenyellow;
+
+}
+.add-friend-wrapper .submit:hover {
+  background-color: rgb(146, 224, 28);
+
+}
+
+/* .add-friend-wrapper .back {
+  background-color: greenyellow;
+} */
+
+/* fav stars */
+.star {
+  position: relative;
+  
+  display: inline-block;
+  width: 0;
+  height: 0;
+  
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid #FC0;
+  border-left:   .3em solid transparent;
+
+  font-size: 18px;
+  
+}
+
+
+.star:before, .star:after {
+  content: '';
+  
+  display: block;
+  width: 0;
+  height: 0;
+  
+  position: absolute;
+  top: .6em;
+  left: -1em;
+
+  border-right:  1em solid transparent;
+  border-bottom: .7em  solid #FC0;
+  border-left:   1em solid transparent;
+
+  transform: rotate(-35deg);
+}
+
+.star:after {  
+  transform: rotate(35deg);
+}
+
+.star-gray {
+  position: relative;
+  
+  display: inline-block;
+  width: 0;
+  height: 0;
+  
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid #ccc;
+  border-left:   .3em solid transparent;
+
+  font-size: 18px;
+  
+}
+
+.star-gray:before, .star-gray:after {
+  content: '';
+  
+  display: block;
+  width: 0;
+  height: 0;
+  
+  position: absolute;
+  top: .6em;
+  left: -1em;
+
+  border-right:  1em solid transparent;
+  border-bottom: .7em  solid #ccc;
+  border-left:   1em solid transparent;
+
+  transform: rotate(-35deg);
+}
+
+.star-gray:after {  
+  transform: rotate(35deg);
 }

@@ -6,7 +6,7 @@ import "../App.css"
 
 export const AddFriend = () => {
     const [addFriendValue, setAddFriendValue] = useState("")
-    const { users, addUser } = useContext(GlobalContext)
+    const { addUser } = useContext(GlobalContext)
     const history = useHistory()
 
     const handleAddFriend = (e) => {

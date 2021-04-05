@@ -82,9 +82,10 @@
   margin-top: 20px;
 }
 
-.add-friend-wrapper input {
+.add-friend-wrapper input, .friends-list input {
   height: 35px;
   padding: 5px;
+  margin: 5px;
 }
 
 .add-friend-wrapper button {

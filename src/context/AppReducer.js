@@ -1,9 +1,9 @@
-export default (state, action) => {
+const AppReducer = (state, action) => {
     switch (action.type) {
         case 'REMOVE_USER':
             return {
                 users: state.users.filter(user => {
-                    return user.id != action.payload
+                    return user.id !== action.payload
                 })
             }
         
@@ -14,7 +14,7 @@ export default (state, action) => {
         
         case 'ADD_FAV':
             const newUserList = [...state.users]
-            const index = newUserList.findIndex(user => user.id == action.payload.id)
+            const index = newUserList.findIndex(user => user.id === action.payload.id)
             const changeObj = { ...newUserList[index] }
             changeObj.isClose = !changeObj.isClose
             newUserList[index] = { ...changeObj }
@@ -27,3 +27,5 @@ export default (state, action) => {
             return state
     }
 }
+
+export default AppReducer

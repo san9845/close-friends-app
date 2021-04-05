@@ -12,8 +12,8 @@ export const FriendsList = () => {
         <div className="friends-list">
             <input type="text" onChange={handleSearch} value={search} placeholder="Search your close friends.." />
             <ul>
-                {users.map((user, index) => {
-                    if (user.name.toLowerCase().includes(search)) {
+                {users.filter(user => user.name.toLowerCase().includes(search)).map((user, index) => {
+                    // if (user.name.toLowerCase().includes(search)) {
                         return (
                             <li key={index + 1}>
                                 <p>{user.name}</p>
@@ -23,7 +23,7 @@ export const FriendsList = () => {
                                 </div>
                             </li>
                         )
-                    }
+                    // }
                 })}
             </ul>
         </div>
